@@ -310,14 +310,9 @@
       {
         "apiVersion": "2018-04-01",
         "type": "Microsoft.Network/virtualNetworks/subnets",
-        "name": "[concat(parameters('virtualNetworkName'), '/', parameters('newSubnetName'))]",
+        "name": "[concat(parameters('virtualNetworkName'))]",
         "location": "[parameters('location')]",
         "properties": {
-          "addressSpace": {
-            "addressPrefixes": [
-              "[parameters('virtualNetworkAddressPrefix')]"
-            ]
-          },
           "subnets": [
             {
               "name": "[parameters('subnet0Name')]",
